@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+}
+
+#hero {
+  background-image: url(hero1.jpg);
+  width: 100%;
+  height: 210px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #hero {
+    background-position: 0px -65px;
+  }
+}
+
+#movies-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 47px;
+  background-color: rgba(0, 0, 0, .75);
+  box-shadow: 0px 3px 10px rgba(50, 50, 50, 0.75);
+  z-index: 900;
+}
+
+#movies-header > span {
+  font-family: sans-serif;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 14px 10px;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+}
+
+#movies-header a, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#movies-header a.active {
+  font-weight: bold;
+}
+
+#movies-container {
+  margin-top: 15px;
+  margin-bottom: 135px;
+}
+
+.movie-thumbnail {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 242px;
+  box-shadow: 3px 3px 15px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border-radius: 1px;
+  max-width: 315px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#dimmer {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, .9);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#yt-player {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  top: 25%;
+}
+
+/****************************
+ Preview Mask styles below
+****************************/
+.preview-mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  -webkit-transition: -webkit-transform 750ms;
+  transition: transform 750ms;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  font-family: sans-serif;
+}
+
+.preview-mask .title {
+  position: relative;
+  width: 80%;
+  left: 14px;
+  top: 16px;
+  max-height: 28px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.preview-mask .cast {
+  font-weight: lighter;
+  position: relative;
+  width: 90%;
+  max-height: 15px;
+  overflow: hidden;
+  font-size: 12px;
+  left: 15px;
+  top: 18px;
+  color: #aaa;
+}
+
+.preview-mask .teaser {
+  position: relative;
+  width: 90%;
+  left: 15px;
+  top: 15px;
+  font-weight: lighter;
+  font-size: 13px;
+  margin-top: 10px;
+  max-height: 128px;
+  z-index: 0;
+  overflow-y: scroll;
+}
+
+.preview-mask .close-mask {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-image: url(close.png);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  cursor: pointer;
+  opacity: .75;
+}
+
+.preview-mask .show-youtube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 3px;
+  bottom: 0;
+  background-position: center;
+  background-image: url(youtube.png);
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  cursor: pointer;
+}
